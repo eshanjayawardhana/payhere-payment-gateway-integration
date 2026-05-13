@@ -65,7 +65,7 @@ export class CheckoutComponent implements OnInit {
           "merchant_id": response.merchantId,
           "return_url": `${environment.appUrl}/success`, 
           "cancel_url": `${environment.appUrl}/cancel`,
-          "notify_url": "https://reaction-jolliness-curvature.ngrok-free.dev/api/v1/payments/webhook", // Must be public URL
+          "notify_url": "https://reaction-jolliness-curvature.ngrok-free.dev/api/v1/payments/webhook",
           "order_id": orderId,
           "items": "Software Service",
           "amount": amount.toFixed(2),

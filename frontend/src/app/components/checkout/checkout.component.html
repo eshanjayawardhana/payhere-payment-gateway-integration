@@ -1,9 +1,76 @@
-<div class="checkout-container">
-  <h2>Premium Subscription</h2>
-  <p>Total Amount: LKR 1500.00</p>
-  
-  <!-- Trigger the payment process when clicked -->
-  <button (click)="initiatePayment()" class="payhere-btn">
-    Pay with PayHere
-  </button>
+<div class="checkout-page">
+  <div class="checkout-card">
+
+    <!-- Header -->
+    <div class="card-header">
+      <div class="logo-row">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/></svg>
+        </div>
+        <span class="logo-text">Secure Checkout</span>
+      </div>
+      <div class="secure-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        SSL secured
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+      <p class="section-label">Order summary</p>
+
+      <!-- Product -->
+      <div class="product-row">
+        <div class="product-left">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div>
+            <div class="product-name">Premium Subscription</div>
+            <div class="product-cycle">Billed monthly</div>
+          </div>
+        </div>
+        <div class="product-price">LKR 1,500</div>
+      </div>
+
+      <!-- Fees -->
+      <div class="fee-row">
+        <span>Subtotal</span>
+        <span class="fee-val">LKR 1,500.00</span>
+      </div>
+      <div class="fee-row">
+        <span>Taxes &amp; fees</span>
+        <span class="fee-val">Included</span>
+      </div>
+
+      <!-- Total -->
+      <div class="total-row">
+        <span class="total-label">Total due today</span>
+        <span class="total-value"><span class="total-currency">LKR</span>1,500.00</span>
+      </div>
+
+      <!-- CTA — logic untouched -->
+      <button (click)="initiatePayment()" class="payhere-btn">
+        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Pay with PayHere
+      </button>
+
+      <!-- Trust signals -->
+      <div class="trust-row">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          256-bit encryption
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          PayHere verified
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Instant activation
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

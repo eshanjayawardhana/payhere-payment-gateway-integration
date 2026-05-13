@@ -1,0 +1,295 @@
+/* ============================================================
+   checkout.component.css
+   NOTE: No :root / body / html rules here.
+   Those live in styles.scss (global).
+   Angular scopes component CSS — global selectors here don't work.
+   ============================================================ */
+
+/* ---- Page wrapper ---- */
+.checkout-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  /* background comes from body in styles.scss */
+}
+
+/* ---- Card ---- */
+.checkout-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 4px 16px rgba(0, 0, 0, 0.05);
+  animation: slideUp 0.3s ease both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Card Header ---- */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 2.2;
+}
+
+.logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.secure-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.secure-badge svg {
+  width: 12px;
+  height: 12px;
+  stroke: #16a34a;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ---- Card Body ---- */
+.card-body {
+  padding: 24px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* ---- Product Row ---- */
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke: #2563eb;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.product-cycle {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Fee Rows ---- */
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 9px;
+}
+
+.fee-row .fee-val {
+  color: #0f172a;
+}
+
+/* ---- Total ---- */
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 6px;
+}
+
+.total-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.total-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.total-currency {
+  font-size: 13px;
+  font-weight: 400;
+  color: #64748b;
+  margin-right: 2px;
+}
+
+/* ---- CTA Button ---- */
+.payhere-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.payhere-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 2;
+}
+
+.payhere-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.payhere-btn:active {
+  transform: scale(0.99);
+}
+
+/* ---- Trust Footer ---- */
+.trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.trust-item svg {
+  width: 12px;
+  height: 12px;
+  stroke: #64748b;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .checkout-card {
+    border-radius: 8px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .total-value {
+    font-size: 18px;
+  }
+
+  .trust-row {
+    gap: 10px;
+  }
+}
